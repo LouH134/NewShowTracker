@@ -1,0 +1,6 @@
+framework module Pods_NewShowTracker {
+  umbrella header "Pods-NewShowTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}

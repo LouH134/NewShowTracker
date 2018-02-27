@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var detailsButton: UIButton!
