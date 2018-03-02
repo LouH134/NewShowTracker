@@ -11,8 +11,11 @@
 		610A30541FA51174005F7390 /* CustomRankAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610A30521FA51174005F7390 /* CustomRankAlertVC.xib */; };
 		610A30571FA53A87005F7390 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A30561FA53A87005F7390 /* DetailsViewController.swift */; };
 		610A30591FA540CA005F7390 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A30581FA540CA005F7390 /* CustomTabBarController.swift */; };
-		6119D1B02045FBBD00C61BB4 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 6119D1AF2045FBBC00C61BB4 /* GoogleService-Info (2).plist */; };
+		6119D1B02045FBBD00C61BB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6119D1AF2045FBBC00C61BB4 /* GoogleService-Info.plist */; };
+		6162FCD62048A01900B0540F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162FCD52048A01900B0540F /* LoginViewController.swift */; };
 		617F72E420474D2D0068F416 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F72E320474D2D0068F416 /* DataHandler.swift */; };
+		61AA0D282049F61600CE7CA5 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */; };
+		61AA0D292049F61600CE7CA5 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA0D272049F61600CE7CA5 /* ProgressHUD.m */; };
 		61E912C31FA424C5001D8181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E912C21FA424C5001D8181 /* AppDelegate.swift */; };
 		61E912C51FA424C5001D8181 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E912C41FA424C5001D8181 /* FirstViewController.swift */; };
 		61E912C71FA424C5001D8181 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E912C61FA424C5001D8181 /* SecondViewController.swift */; };
@@ -38,8 +41,13 @@
 		610A30521FA51174005F7390 /* CustomRankAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRankAlertVC.xib; sourceTree = "<group>"; };
 		610A30561FA53A87005F7390 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		610A30581FA540CA005F7390 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		6119D1AF2045FBBC00C61BB4 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		6119D1AF2045FBBC00C61BB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6162FCD52048A01900B0540F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		617F72E320474D2D0068F416 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		61AA0D242049F61400CE7CA5 /* NewShowTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewShowTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		61AA0D262049F61500CE7CA5 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		61AA0D272049F61600CE7CA5 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		61E912BF1FA424C5001D8181 /* NewShowTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewShowTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E912C21FA424C5001D8181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61E912C41FA424C5001D8181 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				61E912C21FA424C5001D8181 /* AppDelegate.swift */,
+				6162FCD52048A01900B0540F /* LoginViewController.swift */,
 				61E912C41FA424C5001D8181 /* FirstViewController.swift */,
 				617F72E320474D2D0068F416 /* DataHandler.swift */,
 				61E912C61FA424C5001D8181 /* SecondViewController.swift */,
@@ -137,7 +146,11 @@
 				61E912CB1FA424C5001D8181 /* Assets.xcassets */,
 				61E912CD1FA424C5001D8181 /* LaunchScreen.storyboard */,
 				61E912D01FA424C5001D8181 /* Info.plist */,
-				6119D1AF2045FBBC00C61BB4 /* GoogleService-Info (2).plist */,
+				6119D1AF2045FBBC00C61BB4 /* GoogleService-Info.plist */,
+				61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */,
+				61AA0D262049F61500CE7CA5 /* ProgressHUD.h */,
+				61AA0D272049F61600CE7CA5 /* ProgressHUD.m */,
+				61AA0D242049F61400CE7CA5 /* NewShowTracker-Bridging-Header.h */,
 			);
 			path = NewShowTracker;
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 				TargetAttributes = {
 					61E912BE1FA424C5001D8181 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -233,11 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6119D1B02045FBBD00C61BB4 /* GoogleService-Info (2).plist in Resources */,
+				6119D1B02045FBBD00C61BB4 /* GoogleService-Info.plist in Resources */,
 				61E912CF1FA424C5001D8181 /* LaunchScreen.storyboard in Resources */,
 				61E912CC1FA424C5001D8181 /* Assets.xcassets in Resources */,
 				610A30541FA51174005F7390 /* CustomRankAlertVC.xib in Resources */,
 				61E912CA1FA424C5001D8181 /* Main.storyboard in Resources */,
+				61AA0D282049F61600CE7CA5 /* ProgressHUD.bundle in Resources */,
 				61EFF2451FA45C720086DD95 /* CustomSaveAlertVC.xib in Resources */,
 				61EFF2381FA43A4C0086DD95 /* CustomDeleteShowVC.xib in Resources */,
 				61EFF23C1FA44C2D0086DD95 /* CustomDeletePossibleShowAlertVC.xib in Resources */,
@@ -302,6 +317,7 @@
 				61E912C71FA424C5001D8181 /* SecondViewController.swift in Sources */,
 				61EFF2401FA454AE0086DD95 /* CustomCell2.swift in Sources */,
 				61EFF23E1FA454930086DD95 /* CustomCell1.swift in Sources */,
+				6162FCD62048A01900B0540F /* LoginViewController.swift in Sources */,
 				61E912C31FA424C5001D8181 /* AppDelegate.swift in Sources */,
 				61EFF2441FA45C720086DD95 /* CustomSaveAlertVC.swift in Sources */,
 				61E912C51FA424C5001D8181 /* FirstViewController.swift in Sources */,
@@ -312,6 +328,7 @@
 				61EFF2481FA4721D0086DD95 /* EditShowViewController.swift in Sources */,
 				610A30591FA540CA005F7390 /* CustomTabBarController.swift in Sources */,
 				610A30531FA51174005F7390 /* CustomRankAlertVC.swift in Sources */,
+				61AA0D292049F61600CE7CA5 /* ProgressHUD.m in Sources */,
 				610A30571FA53A87005F7390 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,12 +467,15 @@
 			baseConfigurationReference = B9A1C1812A88F3F95DB6966F /* Pods-NewShowTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLE44N3L4M;
 				INFOPLIST_FILE = NewShowTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Umph.NewShowTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewShowTracker/NewShowTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -466,12 +486,14 @@
 			baseConfigurationReference = D22B3BDA71A7BE89E76D0FFB /* Pods-NewShowTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLE44N3L4M;
 				INFOPLIST_FILE = NewShowTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Umph.NewShowTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewShowTracker/NewShowTracker-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
