@@ -16,6 +16,7 @@
 		617F72E420474D2D0068F416 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F72E320474D2D0068F416 /* DataHandler.swift */; };
 		61AA0D282049F61600CE7CA5 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */; };
 		61AA0D292049F61600CE7CA5 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA0D272049F61600CE7CA5 /* ProgressHUD.m */; };
+		61B9736A204DDEE6005460CE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B97369204DDEE6005460CE /* SignUpViewController.swift */; };
 		61E912C31FA424C5001D8181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E912C21FA424C5001D8181 /* AppDelegate.swift */; };
 		61E912C51FA424C5001D8181 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E912C41FA424C5001D8181 /* FirstViewController.swift */; };
 		61E912C71FA424C5001D8181 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E912C61FA424C5001D8181 /* SecondViewController.swift */; };
@@ -48,6 +49,7 @@
 		61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		61AA0D262049F61500CE7CA5 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		61AA0D272049F61600CE7CA5 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		61B97369204DDEE6005460CE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		61E912BF1FA424C5001D8181 /* NewShowTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewShowTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E912C21FA424C5001D8181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61E912C41FA424C5001D8181 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				61E912C21FA424C5001D8181 /* AppDelegate.swift */,
 				6162FCD52048A01900B0540F /* LoginViewController.swift */,
+				61B97369204DDEE6005460CE /* SignUpViewController.swift */,
 				61E912C41FA424C5001D8181 /* FirstViewController.swift */,
 				617F72E320474D2D0068F416 /* DataHandler.swift */,
 				61E912C61FA424C5001D8181 /* SecondViewController.swift */,
@@ -319,6 +322,7 @@
 				61EFF23E1FA454930086DD95 /* CustomCell1.swift in Sources */,
 				6162FCD62048A01900B0540F /* LoginViewController.swift in Sources */,
 				61E912C31FA424C5001D8181 /* AppDelegate.swift in Sources */,
+				61B9736A204DDEE6005460CE /* SignUpViewController.swift in Sources */,
 				61EFF2441FA45C720086DD95 /* CustomSaveAlertVC.swift in Sources */,
 				61E912C51FA424C5001D8181 /* FirstViewController.swift in Sources */,
 				61EFF23B1FA44C2D0086DD95 /* CustomDeletePossibleShowAlertVC.swift in Sources */,

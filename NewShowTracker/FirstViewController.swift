@@ -8,6 +8,18 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
+
+/*TO DO:
+ 1. Redesign UI:
+ A. Share list with friends aka post list to database, tabbar button
+ B. Update list in database, same button as share
+ C. Remove list from database, uibutton
+ D. View friends list, tabbar button
+ E. Add friends aka view specific usernames from database, uibutton in friendslistVC
+ F. Delete friends aka remove specific usernames, uibutton in friendslistVC
+*/
+
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -216,6 +228,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.navigationController?.pushViewController(editShowVC, animated: true)
     }
+    
+    @IBAction func logOut(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+        }catch let logOutError{
+            print(logOutError)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

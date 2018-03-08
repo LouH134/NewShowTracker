@@ -112,6 +112,12 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="TV Shows Memos" id="TIj-LK-sc3">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="ZbN-Xa-4Ak">
+                            <color key="tintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logOut:" destination="9pv-A4-QxB" id="QFi-K9-SX7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="095-VM-EII">
                             <color key="tintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -789,7 +795,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Os-vV-hmk">
                                 <rect key="frame" x="20" y="315.33333333333331" width="374" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -803,11 +809,14 @@
                                 <state key="normal" title="Don't have an account?">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JjD-Ny-13K" kind="presentation" id="q4j-pf-NM0"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNR-00-qd3">
                                 <rect key="frame" x="20" y="375.33333333333331" width="374" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -859,6 +868,110 @@
             </objects>
             <point key="canvasLocation" x="-12" y="-1293"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="sOO-eG-O6f">
+            <objects>
+                <viewController id="JjD-Ny-13K" customClass="SignUpViewController" customModule="NewShowTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GIl-oP-XiU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Episode Icon" translatesAutoresizingMaskIntoConstraints="NO" id="jEd-ye-g1j">
+                                <rect key="frame" x="20" y="40.000000000000014" width="374" height="245.33333333333337"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tmG-Y9-7sM">
+                                <rect key="frame" x="20" y="335.33333333333331" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xG-aU-tX8">
+                                <rect key="frame" x="20" y="385.33333333333331" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-Uj-34h">
+                                <rect key="frame" x="20" y="435.33333333333331" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-CQ-zAK">
+                                <rect key="frame" x="20" y="505" width="374" height="30"/>
+                                <state key="normal" title="Signup">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="JjD-Ny-13K" eventType="touchUpInside" id="lvz-Rh-pyy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk4-ZY-HUS">
+                                <rect key="frame" x="20" y="686" width="374" height="30"/>
+                                <state key="normal" title="Already have an account? Login">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissSignup:" destination="JjD-Ny-13K" eventType="touchUpInside" id="Kr2-uA-XHs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="trailing" secondItem="bSM-Uj-34h" secondAttribute="trailing" constant="20" id="35d-KB-kU7"/>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="trailing" secondItem="ymN-CQ-zAK" secondAttribute="trailing" constant="20" id="3F2-cP-koo"/>
+                            <constraint firstItem="tmG-Y9-7sM" firstAttribute="leading" secondItem="87u-yh-Hdo" secondAttribute="leading" constant="20" id="DkX-w5-iLs"/>
+                            <constraint firstItem="jEd-ye-g1j" firstAttribute="height" secondItem="GIl-oP-XiU" secondAttribute="height" multiplier="1/3" id="Tay-ac-2KL"/>
+                            <constraint firstItem="jEd-ye-g1j" firstAttribute="top" secondItem="87u-yh-Hdo" secondAttribute="top" constant="20" id="UvO-Gp-8jh"/>
+                            <constraint firstItem="tmG-Y9-7sM" firstAttribute="top" secondItem="jEd-ye-g1j" secondAttribute="bottom" constant="50" id="Yd1-V3-6K1"/>
+                            <constraint firstItem="ymN-CQ-zAK" firstAttribute="top" secondItem="bSM-Uj-34h" secondAttribute="bottom" constant="40" id="ZIl-Gz-CsF"/>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="trailing" secondItem="kk4-ZY-HUS" secondAttribute="trailing" constant="20" id="aMJ-NS-D31"/>
+                            <constraint firstItem="6xG-aU-tX8" firstAttribute="top" secondItem="tmG-Y9-7sM" secondAttribute="bottom" constant="20" id="bBr-fY-CP6"/>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="trailing" secondItem="6xG-aU-tX8" secondAttribute="trailing" constant="20" id="hU2-ex-wTH"/>
+                            <constraint firstItem="6xG-aU-tX8" firstAttribute="leading" secondItem="87u-yh-Hdo" secondAttribute="leading" constant="20" id="iB3-R5-PUr"/>
+                            <constraint firstItem="kk4-ZY-HUS" firstAttribute="leading" secondItem="87u-yh-Hdo" secondAttribute="leading" constant="20" id="iXl-42-tpe"/>
+                            <constraint firstItem="jEd-ye-g1j" firstAttribute="leading" secondItem="87u-yh-Hdo" secondAttribute="leading" constant="20" id="o4u-Bq-ncc"/>
+                            <constraint firstItem="bSM-Uj-34h" firstAttribute="leading" secondItem="87u-yh-Hdo" secondAttribute="leading" constant="20" id="qyh-Nj-JTE"/>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="trailing" secondItem="jEd-ye-g1j" secondAttribute="trailing" constant="20" id="reG-IB-LkI"/>
+                            <constraint firstItem="bSM-Uj-34h" firstAttribute="top" secondItem="6xG-aU-tX8" secondAttribute="bottom" constant="20" id="tsA-Mn-S2Q"/>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="trailing" secondItem="tmG-Y9-7sM" secondAttribute="trailing" constant="20" id="vy8-lz-eap"/>
+                            <constraint firstItem="ymN-CQ-zAK" firstAttribute="leading" secondItem="87u-yh-Hdo" secondAttribute="leading" constant="20" id="yB0-ur-NzG"/>
+                            <constraint firstItem="87u-yh-Hdo" firstAttribute="bottom" secondItem="kk4-ZY-HUS" secondAttribute="bottom" constant="20" id="zCT-Ah-9l8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="87u-yh-Hdo"/>
+                    </view>
+                    <connections>
+                        <outlet property="alreadyHaveAccountButton" destination="kk4-ZY-HUS" id="s99-7a-pfg"/>
+                        <outlet property="emailTextField" destination="6xG-aU-tX8" id="5YF-AB-xcz"/>
+                        <outlet property="passwordTextField" destination="bSM-Uj-34h" id="6P7-jX-VWL"/>
+                        <outlet property="signUpButton" destination="ymN-CQ-zAK" id="0Vr-fh-4Ns"/>
+                        <outlet property="userNameTextField" destination="tmG-Y9-7sM" id="gcL-03-G0z"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="goToTabBarVCFromCreate" id="0xy-fr-VP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4R1-RC-05u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771.01449275362324" y="-1286.413043478261"/>
+        </scene>
         <!--Possible Shows-->
         <scene sceneID="kIi-e0-ArI">
             <objects>
@@ -909,4 +1022,7 @@
         <image name="list" width="26" height="30"/>
         <image name="tvshowsmemos" width="960" height="629"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0xy-fr-VP8"/>
+    </inferredMetricsTieBreakers>
 </document>

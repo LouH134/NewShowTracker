@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 
 class DataHandler{
+    
     static func logIn(email:String, password:String, onSuccess: @escaping() -> Void, onError: @escaping (_ errorMessage:String?) -> Void){
         print("login")
         
@@ -34,8 +35,6 @@ class DataHandler{
            let uid = user?.uid
             
             self.setUserInfo(username: username, email: email, uid: uid!, onSuccess: onSuccess)
-            
-            
         })
     }
 

@@ -18,6 +18,7 @@ class LoginViewController:UIViewController{
     @IBOutlet weak var signupButton: UIButton!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +26,7 @@ class LoginViewController:UIViewController{
         
         self.loginButton.isEnabled = false
         
-        //handleTextField()
+        handleTextField()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,10 +41,10 @@ class LoginViewController:UIViewController{
         self.view.endEditing(true)
     }
     
-//    func handleTextField(){
-//        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldChanged), for: UIControlEvents.editingChanged)
-//        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldChanged), for: UIControlEvents.editingChanged)
-//    }
+    func handleTextField(){
+        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldChanged), for: UIControlEvents.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldChanged), for: UIControlEvents.editingChanged)
+    }
     
     func textFieldChanged(){
         guard let emailString = emailTextField.text, !emailString.isEmpty, let passwordString = passwordTextField.text, !passwordString.isEmpty else{
@@ -59,8 +60,11 @@ class LoginViewController:UIViewController{
     @IBAction func loginButtonPressed(_ sender: Any) {
         ProgressHUD.show("Waiting....", interaction:false)
         DataHandler.logIn(email: self.emailTextField.text!, password: self.passwordTextField.text!, onSuccess: {
-            ProgressHUD.showSuccess("Success!")
-            self.performSegue(withIdentifier: "goToTabBarController", sender: nil)
+            DispatchQueue.main.async {
+                ProgressHUD.showSuccess("Success!")
+                self.performSegue(withIdentifier: "goToTabBarController", sender: nil)
+            }
+            
         }, onError: {
             error in ProgressHUD.showError(error)
         })

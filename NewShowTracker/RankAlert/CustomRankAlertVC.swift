@@ -18,6 +18,7 @@ class CustomRankAlertVC: UIViewController {
     var currentlySelectedShow:Show!
     var navController:UINavigationController?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
