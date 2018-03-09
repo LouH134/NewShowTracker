@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
         designForUI()
         
         self.signUpButton.isEnabled = false
-
+        
         handleTextField()
     }
     
@@ -66,7 +66,7 @@ class SignUpViewController: UIViewController {
         })
     }
     
-
+    
     @IBAction func dismissSignup(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -96,5 +96,5 @@ class SignUpViewController: UIViewController {
         
     }
     
-
+    
 }

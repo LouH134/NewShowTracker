@@ -25,19 +25,18 @@ class DataHandler{
             onSuccess()
         })
     }
-    
     static func signUp(username:String, email:String, password:String, onSuccess: @escaping() -> Void, onError: @escaping (_ errorMessage:String?)-> Void){
         Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in if error != nil{
             onError(error!.localizedDescription)
             return
             }
             
-           let uid = user?.uid
+            let uid = user?.uid
             
             self.setUserInfo(username: username, email: email, uid: uid!, onSuccess: onSuccess)
         })
     }
-
+    
     static func setUserInfo(username:String, email:String, uid:String, onSuccess: @escaping() -> Void){
         let ref = Database.database().reference()
         let userReference = ref.child("users")
