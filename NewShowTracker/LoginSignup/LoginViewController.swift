@@ -46,7 +46,7 @@ class LoginViewController:UIViewController{
         passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldChanged), for: UIControlEvents.editingChanged)
     }
     
-    func textFieldChanged(){
+    @objc func textFieldChanged(){
         guard let emailString = emailTextField.text, !emailString.isEmpty, let passwordString = passwordTextField.text, !passwordString.isEmpty else{
             self.loginButton.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
             self.loginButton.isEnabled = false

@@ -13,6 +13,7 @@
 		610A30591FA540CA005F7390 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A30581FA540CA005F7390 /* CustomTabBarController.swift */; };
 		6119D1B02045FBBD00C61BB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6119D1AF2045FBBC00C61BB4 /* GoogleService-Info.plist */; };
 		6162FCD62048A01900B0540F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162FCD52048A01900B0540F /* LoginViewController.swift */; };
+		617CD392205B1B2400A2CF7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617CD391205B1B2300A2CF7E /* User.swift */; };
 		617F72E420474D2D0068F416 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F72E320474D2D0068F416 /* DataHandler.swift */; };
 		61AA0D282049F61600CE7CA5 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */; };
 		61AA0D292049F61600CE7CA5 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA0D272049F61600CE7CA5 /* ProgressHUD.m */; };
@@ -44,6 +45,7 @@
 		610A30581FA540CA005F7390 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		6119D1AF2045FBBC00C61BB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6162FCD52048A01900B0540F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		617CD391205B1B2300A2CF7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = /Users/louisharris/Desktop/TurnToTechExercises/NewShowTracker/NewShowTracker/User.swift; sourceTree = "<absolute>"; };
 		617F72E320474D2D0068F416 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		61AA0D242049F61400CE7CA5 /* NewShowTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewShowTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		61AA0D252049F61500CE7CA5 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
@@ -110,6 +112,33 @@
 			path = RankAlert;
 			sourceTree = "<group>";
 		};
+		617CD38E205B19ED00A2CF7E /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				6162FCD52048A01900B0540F /* LoginViewController.swift */,
+				61B97369204DDEE6005460CE /* SignUpViewController.swift */,
+			);
+			path = LoginSignup;
+			sourceTree = "<group>";
+		};
+		617CD38F205B1A5B00A2CF7E /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61E912C41FA424C5001D8181 /* FirstViewController.swift */,
+				61E912C61FA424C5001D8181 /* SecondViewController.swift */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		617CD390205B1AC700A2CF7E /* EditandDisplayViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61EFF2471FA4721D0086DD95 /* EditShowViewController.swift */,
+				610A30561FA53A87005F7390 /* DetailsViewController.swift */,
+			);
+			path = EditandDisplayViewControllers;
+			sourceTree = "<group>";
+		};
 		61E912B61FA424C5001D8181 = {
 			isa = PBXGroup;
 			children = (
@@ -132,13 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				61E912C21FA424C5001D8181 /* AppDelegate.swift */,
-				6162FCD52048A01900B0540F /* LoginViewController.swift */,
-				61B97369204DDEE6005460CE /* SignUpViewController.swift */,
-				61E912C41FA424C5001D8181 /* FirstViewController.swift */,
+				617CD391205B1B2300A2CF7E /* User.swift */,
 				617F72E320474D2D0068F416 /* DataHandler.swift */,
-				61E912C61FA424C5001D8181 /* SecondViewController.swift */,
-				61EFF2471FA4721D0086DD95 /* EditShowViewController.swift */,
-				610A30561FA53A87005F7390 /* DetailsViewController.swift */,
+				617CD38E205B19ED00A2CF7E /* LoginSignup */,
+				617CD38F205B1A5B00A2CF7E /* MainViewControllers */,
+				617CD390205B1AC700A2CF7E /* EditandDisplayViewControllers */,
 				610A30581FA540CA005F7390 /* CustomTabBarController.swift */,
 				61EFF2491FA472430086DD95 /* SaveAlert */,
 				61EFF2461FA45C7E0086DD95 /* CustomCells */,
@@ -331,6 +358,7 @@
 				61EFF2371FA43A4C0086DD95 /* CustomDeleteShowVC.swift in Sources */,
 				61EFF2481FA4721D0086DD95 /* EditShowViewController.swift in Sources */,
 				610A30591FA540CA005F7390 /* CustomTabBarController.swift in Sources */,
+				617CD392205B1B2400A2CF7E /* User.swift in Sources */,
 				610A30531FA51174005F7390 /* CustomRankAlertVC.swift in Sources */,
 				61AA0D292049F61600CE7CA5 /* ProgressHUD.m in Sources */,
 				610A30571FA53A87005F7390 /* DetailsViewController.swift in Sources */,

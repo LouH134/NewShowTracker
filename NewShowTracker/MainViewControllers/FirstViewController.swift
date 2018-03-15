@@ -9,15 +9,20 @@
 import UIKit
 import CoreData
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
+/*NEW QUESTIONS:
+1. Does the database recognize the list with specific user?
+*/
 /*TO DO:
  1. Redesign UI:
- A. Share list with friends aka post list to database, tabbar button
+ A. Share list with friends aka post list to database
  B. Update list in database, same button as share
  C. Remove list from database, uibutton
- D. View friends list, tabbar button
- E. Add friends aka view specific usernames from database, uibutton in friendslistVC
- F. Delete friends aka remove specific usernames, uibutton in friendslistVC
+ D. Add friends aka view specific usernames from database, uibutton in friendslistVC
+ E. Delete friends aka remove specific usernames, uibutton in friendslistVC
+ 2. Make FriendsListViewController
 */
 
 
@@ -27,10 +32,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var followedShowsTableView: UITableView!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var shareUpdateButton: UIButton!
+    @IBOutlet weak var unShareButton: UIButton!
     var allShows:[Show] = []
     var followedShows:[Show] = []
     var selectedShow:Show?
-
+    var sharedShowNames = [String]()
+    var currentUser = User()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,6 +95,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         detailsButton.layer.borderWidth = 2.5
         detailsButton.layer.borderColor = UIColor.purple.cgColor
         detailsButton.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
+        
+        shareUpdateButton.layer.cornerRadius = 5
+        shareUpdateButton.layer.borderWidth = 2.5
+        shareUpdateButton.layer.borderColor = UIColor.purple.cgColor
+        shareUpdateButton.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
+        
+        unShareButton.layer.cornerRadius = 5
+        unShareButton.layer.borderWidth = 2.5
+        unShareButton.layer.borderColor = UIColor.purple.cgColor
+        unShareButton.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
     }
     
     func getFollowedObjectsAndShow(){
@@ -236,6 +256,26 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print(logOutError)
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func sharePressed(_ sender: Any) {
+        for show in followedShows{
+            let showName = show.showName
+            sharedShowNames.append(showName!)
+        }
+     
+        let listID = NSUUID().uuidString
+        currentUser.userID = Auth.auth().currentUser?.uid
+        
+        DataHandler.sendDataToDatabase(shareArray: sharedShowNames, storageID: listID, userID: currentUser.userID!, onSuccess: {
+            DispatchQueue.main.async {
+                ProgressHUD.showSuccess("Woot! It worked!")
+            }
+        })
+    }
+    
+    
+    @IBAction func unSharePressed(_ sender: Any) {
     }
     
     

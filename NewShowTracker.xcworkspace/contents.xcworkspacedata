@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/louisharris/Desktop/TurnToTechExercises/NewShowTracker/NewShowTracker/User.swift">
+   </FileRef>
+   <FileRef
       location = "group:NewShowTracker.xcodeproj">
    </FileRef>
    <FileRef

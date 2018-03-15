@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W9-4a-hUf">
-                                <rect key="frame" x="369" y="674.66666666666663" width="45" height="30"/>
+                                <rect key="frame" x="62" y="674" width="45" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,17 +84,37 @@
                                     <action selector="deletePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gw3-zh-uTE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-3z-JBh">
+                                <rect key="frame" x="356" y="674" width="58" height="30"/>
+                                <state key="normal" title="Unshare">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="unSharePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="alR-xq-Ohw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGk-Yj-oyx">
+                                <rect key="frame" x="246" y="674" width="95" height="30"/>
+                                <state key="normal" title="Share/Update">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sharePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bv6-iz-p0C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0W9-4a-hUf" firstAttribute="leading" secondItem="xjB-4y-Vlq" secondAttribute="trailing" constant="15" id="2BK-9L-CMp"/>
+                            <constraint firstItem="fWg-3z-JBh" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="2Jo-3O-G6H"/>
                             <constraint firstItem="AHT-hy-VRW" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" id="4bG-PI-qbm"/>
                             <constraint firstItem="avO-gW-8X3" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="7y1-gj-YBa"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="BrA-nm-wCA"/>
                             <constraint firstItem="avO-gW-8X3" firstAttribute="top" secondItem="AHT-hy-VRW" secondAttribute="bottom" constant="8" id="Cuq-fd-Z5k"/>
+                            <constraint firstItem="TGk-Yj-oyx" firstAttribute="top" secondItem="um6-ro-C83" secondAttribute="bottom" constant="8" id="Dd9-72-nay"/>
                             <constraint firstItem="xjB-4y-Vlq" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="EbH-c5-glh"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="ErX-0A-Zam"/>
                             <constraint firstItem="avO-gW-8X3" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Ojj-z3-YlF"/>
-                            <constraint firstItem="0W9-4a-hUf" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="UXi-nD-oQS"/>
                             <constraint firstItem="avO-gW-8X3" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="3/5" id="Wla-gS-2Xf"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="KQZ-1w-vlD" secondAttribute="trailing" id="Wlb-bD-9Pj"/>
                             <constraint firstItem="avO-gW-8X3" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="aKc-7h-96c"/>
@@ -103,11 +123,13 @@
                             <constraint firstItem="um6-ro-C83" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="cie-2M-T7M"/>
                             <constraint firstItem="AHT-hy-VRW" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.3" id="e6L-VC-VNl"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="fc9-hX-Pt0"/>
+                            <constraint firstItem="fWg-3z-JBh" firstAttribute="leading" secondItem="TGk-Yj-oyx" secondAttribute="trailing" constant="15" id="jlU-za-wXW"/>
+                            <constraint firstItem="fWg-3z-JBh" firstAttribute="top" secondItem="um6-ro-C83" secondAttribute="bottom" constant="8" id="jy6-LN-AzR"/>
+                            <constraint firstItem="0W9-4a-hUf" firstAttribute="top" secondItem="um6-ro-C83" secondAttribute="bottom" constant="8" id="kRF-nb-IY6"/>
                             <constraint firstItem="xjB-4y-Vlq" firstAttribute="top" secondItem="um6-ro-C83" secondAttribute="bottom" constant="8" id="le0-jP-Po3"/>
                             <constraint firstItem="AHT-hy-VRW" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="1/8" id="oLz-pK-um9"/>
                             <constraint firstItem="xjB-4y-Vlq" firstAttribute="top" secondItem="avO-gW-8X3" secondAttribute="bottom" constant="8" id="r18-fA-AgZ"/>
                             <constraint firstItem="um6-ro-C83" firstAttribute="top" secondItem="AHT-hy-VRW" secondAttribute="bottom" constant="8" id="x7Z-vG-9f4"/>
-                            <constraint firstItem="0W9-4a-hUf" firstAttribute="top" secondItem="avO-gW-8X3" secondAttribute="bottom" constant="8" id="z7L-zs-xtE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -130,6 +152,8 @@
                         <outlet property="detailsButton" destination="xjB-4y-Vlq" id="yes-K1-2Iy"/>
                         <outlet property="followedShowsTableView" destination="avO-gW-8X3" id="sYW-p7-mmb"/>
                         <outlet property="image" destination="um6-ro-C83" id="YRP-bK-AKa"/>
+                        <outlet property="shareUpdateButton" destination="TGk-Yj-oyx" id="0x5-Qk-UQb"/>
+                        <outlet property="unShareButton" destination="fWg-3z-JBh" id="GNs-rT-lze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -647,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqE-OQ-3F1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="724"/>
+            <point key="canvasLocation" x="-41" y="1799"/>
         </scene>
         <!--Possible Shows-->
         <scene sceneID="wg7-f3-ORb">
@@ -761,7 +785,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="1097"/>
+            <point key="canvasLocation" x="-10" y="1030"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -775,6 +799,7 @@
                     <connections>
                         <segue destination="vLS-07-zvj" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="1AH-ub-6ik" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="3OC-CY-eua" kind="relationship" relationship="viewControllers" id="cV2-Vf-55i"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -989,7 +1014,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6b-Fe-rtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="259"/>
+            <point key="canvasLocation" x="-13" y="281"/>
+        </scene>
+        <!--Friends Lists-->
+        <scene sceneID="uSs-GY-xFb">
+            <objects>
+                <viewController id="zze-LV-d6f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eW-wY-HRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kcw-Ks-I5J"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friends Lists" id="sMJ-iY-sh0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogu-yb-iVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="1030"/>
         </scene>
         <!--Currently Watching-->
         <scene sceneID="t5m-mx-RRW">
@@ -1010,6 +1052,25 @@
             </objects>
             <point key="canvasLocation" x="-753" y="259"/>
         </scene>
+        <!--Friend's List-->
+        <scene sceneID="Xoh-Yc-Qjw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3OC-CY-eua" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friend's List" image="network (1)" id="WCQ-NZ-gjL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dr7-RM-Pc4">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zze-LV-d6f" kind="relationship" relationship="rootViewController" id="LIa-TU-bhh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BL7-wN-jNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="258"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Episode Icon" width="128" height="128"/>
@@ -1020,6 +1081,7 @@
         <image name="Summary" width="618" height="467"/>
         <image name="TableViewImage" width="640" height="360"/>
         <image name="list" width="26" height="30"/>
+        <image name="network (1)" width="64" height="64"/>
         <image name="tvshowsmemos" width="960" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>

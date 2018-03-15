@@ -50,5 +50,21 @@ class DataHandler{
     struct URLConfig {
         static var ROOT_URL = "https://showtracker-b0a1c.firebaseio.com"
     }
+    
+    static func sendDataToDatabase(shareArray:[String], storageID:String, userID:String, onSuccess: @escaping() -> Void){
+        //create node in database
+        let ref = Database.database().reference()
+        let listReference = ref.child("Lists")
+        let newListID = listReference.childByAutoId().key
+        
+        let newListReference = listReference.child(newListID)
+        //adding childs to post
+        newListReference.setValue(["List":shareArray, "StorageID":storageID, "User":userID], withCompletionBlock:{(error,ref) in if error != nil{
+            ProgressHUD.showError(error!.localizedDescription)
+            return
+            }
+        })
+        onSuccess()
+    }
 }
 
