@@ -12,17 +12,17 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-/*NEW QUESTIONS:
-1. Does the database recognize the list with specific user?
+/*Problems:
+1. When user signs out coredata keeps everything saved to device. If a different user were to sign in on same device, then the other data would show.
+ 2. Only the name and rank of show is saved in firebase not everything else that coredata saves
+ 3. Each Update is a new post to lists in firebase. Should I make each update a new post? or should I overwrite the old post?
 */
 /*TO DO:
- 1. Redesign UI:
- A. Share list with friends aka post list to database
- B. Update list in database, same button as share
- C. Remove list from database, uibutton
- D. Add friends aka view specific usernames from database, uibutton in friendslistVC
- E. Delete friends aka remove specific usernames, uibutton in friendslistVC
- 2. Make FriendsListViewController
+ 1. Share list with friends aka post list to database
+ 2. Update list in database, same button as share
+ 3. Remove list from database, uibutton
+ 4. Add friends aka view specific usernames from database, uibutton in friendslistVC
+ 5. Delete friends aka remove specific usernames, uibutton in friendslistVC
 */
 
 
