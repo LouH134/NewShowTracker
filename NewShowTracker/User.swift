@@ -11,5 +11,6 @@ class User: NSObject {
     var username:String?
     var email:String?
     var userID:String?
+    var listID:String?
 
 }

@@ -1,15 +1,19 @@
 //
-//  SecondViewController.swift
+//  CreateShowVC.swift
 //  NewShowTracker
 //
-//  Created by Louis Harris on 10/27/17.
-//  Copyright © 2017 Louis Harris. All rights reserved.
+//  Created by Louis Harris on 4/11/18.
+//  Copyright © 2018 Louis Harris. All rights reserved.
 //
 
 import UIKit
 import CoreData
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
-class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CreateShowVC: UIViewController,UITableViewDataSource, UITableViewDelegate {
+
     @IBOutlet weak var addShowButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var addPossibleShowButton: UIButton!
@@ -190,7 +194,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func addShowPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let firstVC = storyboard.instantiateViewController(withIdentifier: "firstViewController") as! FirstViewController
+        let firstVC = storyboard.instantiateViewController(withIdentifier: "followedShowsVC") as! FollowedShowsVC
         
         let indexPath = possibleShowsTableView.indexPathForSelectedRow
         guard let index = indexPath else{
@@ -330,5 +334,5 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             deleteButton.tintColor = .gray
         }
     }
-}
 
+}

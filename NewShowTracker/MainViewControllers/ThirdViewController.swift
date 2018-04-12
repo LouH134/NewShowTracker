@@ -32,6 +32,11 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
 
     @IBAction func addFriendsPressed(_ sender: Any) {
+        let customAlert = AddFriendViewController()
+        customAlert.thirdVC = self
+        customAlert.modalPresentationStyle = .overCurrentContext
+        customAlert.modalTransitionStyle = .crossDissolve
+        present(customAlert, animated: true)
     }
     
     @IBAction func deleteFriendsPressed(_ sender: Any) {
@@ -39,11 +44,12 @@ class ThirdViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = friendsTableView.dequeueReusableCell(withIdentifier: "cell")
+        return cell!
     }
     
 }

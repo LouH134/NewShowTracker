@@ -13,7 +13,7 @@ class CustomDeleteShowVC: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var deleteShowView: UIView!
-    var firstVC:FirstViewController!
+    var firstVC:FollowedShowsVC!
     
     
     override func viewDidLoad() {

@@ -13,7 +13,7 @@ class CustomDeletePossibleShowAlertVC: UIViewController {
     @IBOutlet weak var deletePossibleShowAlertView: UIView!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
-    var secondVC:SecondViewController!
+    var secondVC:CreateShowVC!
 
     override func viewDidLoad() {
         super.viewDidLoad()

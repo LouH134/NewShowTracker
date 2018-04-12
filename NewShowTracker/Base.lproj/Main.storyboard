@@ -13,7 +13,7 @@
         <!--TV Shows Memos-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="firstViewController" id="9pv-A4-QxB" customClass="FirstViewController" customModule="NewShowTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="followedShowsVC" id="9pv-A4-QxB" customClass="FollowedShowsVC" customModule="NewShowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,8 +94,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGk-Yj-oyx">
-                                <rect key="frame" x="246" y="674" width="95" height="30"/>
-                                <state key="normal" title="Share/Update">
+                                <rect key="frame" x="255" y="674" width="86" height="30"/>
+                                <state key="normal" title="Post/Update">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-754.39999999999998" y="1030.4347826086957"/>
+            <point key="canvasLocation" x="-13" y="1030"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="fZ0-Xz-VT8">
@@ -676,7 +676,7 @@
         <!--Possible Shows-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController storyboardIdentifier="secondViewController" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="NewShowTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createShowVC" id="8rJ-Kc-sve" customClass="CreateShowVC" customModule="NewShowTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -724,7 +724,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="deletePossibleShowPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="PBi-mt-0jk"/>
+                                    <action selector="deletePossibleShowPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="7TT-Ok-laE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l52-wd-MDK">
@@ -733,7 +733,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPossibleShowPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xfG-zQ-uCM"/>
+                                    <action selector="addPossibleShowPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="QVp-zX-y97"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUK-ng-ZkO">
@@ -742,7 +742,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addShowPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4kX-cI-icf"/>
+                                    <action selector="addShowPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ZQK-8C-rwS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -769,22 +769,19 @@
                     <navigationItem key="navigationItem" title="Possible Shows" id="iuU-FM-PDD">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="rVR-y5-3wV">
                             <color key="tintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="goToEditVC:" destination="8rJ-Kc-sve" id="VWI-KJ-EoA"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPossibleShowButton" destination="l52-wd-MDK" id="lGh-LC-9b3"/>
-                        <outlet property="addShowButton" destination="eUK-ng-ZkO" id="LiR-8M-BpS"/>
-                        <outlet property="deleteButton" destination="jua-LE-7ZI" id="7iv-jZ-bxc"/>
-                        <outlet property="possibleShowsImage" destination="eMO-WH-9yu" id="scF-xF-mkf"/>
-                        <outlet property="possibleShowsTableView" destination="Ohi-gB-YRv" id="wv0-hj-GoM"/>
+                        <outlet property="addPossibleShowButton" destination="l52-wd-MDK" id="148-bG-Lla"/>
+                        <outlet property="addShowButton" destination="eUK-ng-ZkO" id="qAp-r5-plH"/>
+                        <outlet property="deleteButton" destination="jua-LE-7ZI" id="3du-0n-TAX"/>
+                        <outlet property="possibleShowsImage" destination="eMO-WH-9yu" id="lEo-Qv-vtg"/>
+                        <outlet property="possibleShowsTableView" destination="Ohi-gB-YRv" id="1mv-Da-SEx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="1030"/>
+            <point key="canvasLocation" x="-755" y="1030"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -796,8 +793,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vLS-07-zvj" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="1AH-ub-6ik" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="vLS-07-zvj" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="3OC-CY-eua" kind="relationship" relationship="viewControllers" id="cV2-Vf-55i"/>
                     </connections>
                 </tabBarController>
@@ -1013,7 +1010,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6b-Fe-rtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="281"/>
+            <point key="canvasLocation" x="-755" y="285"/>
         </scene>
         <!--Friends Lists-->
         <scene sceneID="uSs-GY-xFb">
@@ -1094,7 +1091,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP4-yy-7Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-753" y="259"/>
+            <point key="canvasLocation" x="-10" y="285"/>
         </scene>
         <!--Friend's List-->
         <scene sceneID="Xoh-Yc-Qjw">
@@ -1113,7 +1110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BL7-wN-jNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="258"/>
+            <point key="canvasLocation" x="770" y="285"/>
         </scene>
     </scenes>
     <resources>

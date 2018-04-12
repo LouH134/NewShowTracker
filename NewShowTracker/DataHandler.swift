@@ -14,6 +14,7 @@ import FirebaseDatabase
 
 class DataHandler{
     
+    
     static func logIn(email:String, password:String, onSuccess: @escaping() -> Void, onError: @escaping (_ errorMessage:String?) -> Void){
         print("login")
         
@@ -51,12 +52,14 @@ class DataHandler{
         static var ROOT_URL = "https://showtracker-b0a1c.firebaseio.com"
     }
     
-    static func sendDataToDatabase(shareArray:[String], storageID:String, userID:String, onSuccess: @escaping() -> Void){
+    static func sendDataToDatabase(shareArray:[String], storageID:String, userID:String, onSuccess: @escaping(_ isSuccess:Bool, String?) -> ()){
         //create node in database
         let ref = Database.database().reference()
         let listReference = ref.child("Lists")
         let newListID = listReference.childByAutoId().key
         
+        //Problem: newListID is always different so list will never exist.
+        //New Problem: need current user to get the unique ID so I need a UIKit but DataHandler isn't a view controller. I could make a function in Firstview controller but not supposed to do network calls in viewcontroller.
         let newListReference = listReference.child(newListID)
         //adding childs to post
         newListReference.setValue(["List":shareArray, "StorageID":storageID, "User":userID], withCompletionBlock:{(error,ref) in if error != nil{
@@ -64,7 +67,8 @@ class DataHandler{
             return
             }
         })
-        onSuccess()
+        onSuccess(true, newListID)
     }
+    
 }
 

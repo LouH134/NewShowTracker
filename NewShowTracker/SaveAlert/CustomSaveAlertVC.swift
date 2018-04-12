@@ -14,7 +14,7 @@ class CustomSaveAlertVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveAlertView: UIView!
-    var secondVC: SecondViewController!
+    var secondVC: CreateShowVC!
 
     
     

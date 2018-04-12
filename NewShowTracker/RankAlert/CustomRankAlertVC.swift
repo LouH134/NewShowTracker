@@ -41,12 +41,12 @@ class CustomRankAlertVC: UIViewController {
         //push to a viewcontroller depending on followed bool
         if currentlySelectedShow.followed == true{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let firstVC = storyboard.instantiateViewController(withIdentifier: "firstViewController") as! FirstViewController
+            let firstVC = storyboard.instantiateViewController(withIdentifier: "followedShowsVC") as! FollowedShowsVC
             navController?.pushViewController(firstVC, animated: true)
             dismiss(animated: true, completion: nil)
         }else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let secondVC = storyboard.instantiateViewController(withIdentifier: "secondViewController") as! SecondViewController
+            let secondVC = storyboard.instantiateViewController(withIdentifier: "createShowVC") as! CreateShowVC
             navController?.pushViewController(secondVC, animated: true)
             dismiss(animated: true, completion: nil)
         }

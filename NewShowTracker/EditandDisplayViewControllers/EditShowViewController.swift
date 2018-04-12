@@ -239,11 +239,11 @@ class EditShowViewController: UIViewController, UITextViewDelegate {
             //look for followed bool if followed bool is true go to firstVC if followed bool is false go to secondVC
             if currentlySelectedShow.followed == true{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let firstVC = storyboard.instantiateViewController(withIdentifier: "firstViewController") as! FirstViewController
+                let firstVC = storyboard.instantiateViewController(withIdentifier: "followedShowsVC") as! FollowedShowsVC
                 self.navigationController?.pushViewController(firstVC, animated: true)
             }else{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let secondVC = storyboard.instantiateViewController(withIdentifier: "secondViewController") as! SecondViewController
+                let secondVC = storyboard.instantiateViewController(withIdentifier: "createShowVC") as! CreateShowVC
                 self.navigationController?.pushViewController(secondVC, animated: true)
             }
             
